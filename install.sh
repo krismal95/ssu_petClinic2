@@ -63,14 +63,9 @@ echo "!!!access list"
 sudo chown -R jenkins:jenkins $HOME_JENKINS/plugins/*
 
 #port guest->host
-sudo iptables -I INPUT 1 -p tcp --dport 8080 -j ACCEPT
-sudo iptables -I INPUT 1 -p tcp --dport 8090 -j ACCEPT
+sudo iptables -A INPUT -p tcp —dport 8080 -j ACCEPT
+sudo iptables -A INPUT -p tcp —dport 8090 -j ACCEPT
 
 
 echo "!!!jenkins start"
 sudo service jenkins start
-
-
-
-
-
