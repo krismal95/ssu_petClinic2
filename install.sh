@@ -11,11 +11,6 @@ PYTH_VBOX=`pwd`
 
 sudo service jenkins stop
 
-echo "!!!cope file port"
-#copy file jenkins whith change port:8090 
-sudo cp -rf $PYTH_VBOX/jenkins /etc/default
-sudo chown -R jenkins:jenkins /etc/default/jenkins
-
 echo "!!!cope config "
 #copy config jenkins
 sudo cp -rf $PYTH_VBOX/config/* $HOME_JENKINS
