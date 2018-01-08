@@ -7,18 +7,18 @@ sudo apt-get -y install jenkins
 
 echo "config jenkins"
 HOME_JENKINS=/var/lib/jenkins
-PYTH_VBOX=`pwd`
+
 
 sudo service jenkins stop
 
 echo "!!!cope config "
 #copy config jenkins
-sudo cp -rf $PYTH_VBOX/config/* $HOME_JENKINS
+sudo cp -rf /tmp/ssu/config/* $HOME_JENKINS
 sudo chown -R jenkins:jenkins $HOME_JENKINS/*
 
 echo "!!!cope jobs"
 #copy jobs
-sudo cp -rp $PYTH_VBOX/jobs/* $HOME_JENKINS/jobs
+sudo cp -rp /tmp/ssu/jobs/* $HOME_JENKINS/jobs
 sudo chown -R jenkins:jenkins $HOME_JENKINS/jobs/*
 sudo chown -R jenkins:jenkins $HOME_JENKINS/jobs
 
